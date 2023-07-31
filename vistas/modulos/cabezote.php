@@ -8,7 +8,7 @@
 		<!-- logo mini -->
 		<span class="logo-mini">
 			
-			<img src="vistas/img/plantilla/icono-blanco.png" class="img-responsive" style="padding:10px">
+			<img src="vistas/img/plantilla/172x172px- B.png" class="img-responsive" style="padding:10px">
 
 		</span>
 
@@ -16,7 +16,7 @@
 
 		<span class="logo-lg">
 			
-			<img src="vistas/img/plantilla/logo-blanco-lineal.png" class="img-responsive" style="padding:10px 0px">
+			<img src="vistas/img/plantilla/1250x183px- B.png" class="img-responsive" style="padding:10px 0px">
 
 		</span>
 
@@ -47,16 +47,6 @@
 
 					<?php
 
-					if($_SESSION["foto"] != ""){
-
-						echo '<img src="'.$_SESSION["foto"].'" class="user-image">';
-
-					}else{
-
-
-						echo '<img src="vistas/img/usuarios/default/anonymous.png" class="user-image">';
-
-					}
 
 
 					?>
