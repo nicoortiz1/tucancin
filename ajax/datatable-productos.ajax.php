@@ -37,7 +37,8 @@ class TablaProductos{
  	 		TRAEMOS LA IMAGEN
   			=============================================*/ 
 
-		  	$imagen = "<img src='".$productos[$i]["imagen"]."' width='40px'>";
+		  	$imagen = "<img src='".($productos[$i]["imagen"] !== "" ? $productos[$i]["imagen"] : "ruta_de_imagen_predeterminada.jpg")."' width='40px'>";
+
 
 		  	/*=============================================
  	 		TRAEMOS LA CATEGORÍA
@@ -88,6 +89,7 @@ class TablaProductos{
 			      "'.$productos[$i]["descripcion"].'",
 			      "'.$categorias["categoria"].'",
 			      "'.$stock.'",
+				  "'.$productos[$i]["lote"].'",
 			      "'.$productos[$i]["precio_compra"].'",
 			      "'.$productos[$i]["precio_venta"].'",
 			      "'.$productos[$i]["fecha"].'",

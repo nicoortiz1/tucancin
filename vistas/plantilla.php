@@ -11,12 +11,12 @@ session_start();
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Inventory System</title>
+  <title>TUCAN</title>
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-  <link rel="icon" href="vistas/img/plantilla/icono-negro.png">
+  <link rel="icon" href="vistas/img/plantilla/172x172px- M.png">
 
    <!--=====================================
   PLUGINS DE CSS
@@ -51,10 +51,6 @@ session_start();
 
   <!-- Morris chart -->
   <link rel="stylesheet" href="vistas/bower_components/morris.js/morris.css">
-
-  <!--=====================================
-  PLUGINS DE JAVASCRIPT
-  ======================================-->
 
   <!-- jQuery 3 -->
   <script src="vistas/bower_components/jquery/dist/jquery.min.js"></script>
@@ -106,9 +102,7 @@ session_start();
 
 </head>
 
-<!--=====================================
-CUERPO DOCUMENTO
-======================================-->
+
 
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
  
@@ -118,21 +112,14 @@ CUERPO DOCUMENTO
 
    echo '<div class="wrapper">';
 
-    /*=============================================
-    CABEZOTE
-    =============================================*/
+   
 
     include "modulos/cabezote.php";
 
-    /*=============================================
-    MENU
-    =============================================*/
+
 
     include "modulos/menu.php";
 
-    /*=============================================
-    CONTENIDO
-    =============================================*/
 
     if(isset($_GET["ruta"])){
 
@@ -161,9 +148,7 @@ CUERPO DOCUMENTO
 
     }
 
-    /*=============================================
-    FOOTER
-    =============================================*/
+
 
     include "modulos/footer.php";
 

@@ -99,7 +99,7 @@ MODAL AGREGAR PRODUCTO
         CABEZA DEL MODAL
         ======================================-->
 
-        <div class="modal-header" style="background:#3c8dbc; color:white">
+        <div class="modal-header" style="background:##54190E; color:white">
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -185,6 +185,20 @@ MODAL AGREGAR PRODUCTO
                 <span class="input-group-addon"><i class="fa fa-check"></i></span> 
 
                 <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Stock" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA PARA LOTE -->
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-check"></i></span> 
+
+                <input type="number" class="form-control input-lg" name="nuevoLote" min="0" placeholder="Lote" required>
 
               </div>
 
@@ -315,7 +329,7 @@ MODAL EDITAR PRODUCTO
         CABEZA DEL MODAL
         ======================================-->
 
-        <div class="modal-header" style="background:#3c8dbc; color:white">
+        <div class="modal-header" style="background:##54190E; color:white">
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -387,6 +401,19 @@ MODAL EDITAR PRODUCTO
                 <span class="input-group-addon"><i class="fa fa-check"></i></span> 
 
                 <input type="number" class="form-control input-lg" id="editarStock" name="editarStock" min="0" required>
+
+              </div>
+
+            </div>
+            <!-- ENTRADA PARA LOTE -->
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-check"></i></span> 
+
+                <input type="number" class="form-control input-lg" id="editarLote" name="editarLote" min="0" required>
 
               </div>
 
