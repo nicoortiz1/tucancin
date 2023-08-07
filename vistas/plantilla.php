@@ -18,9 +18,7 @@ session_start();
 
   <link rel="icon" href="vistas/img/plantilla/172x172px- M.png">
 
-   <!--=====================================
-  PLUGINS DE CSS
-  ======================================-->
+   <!-- PLUGINS DE CSS -->
 
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="vistas/bower_components/bootstrap/dist/css/bootstrap.min.css">
