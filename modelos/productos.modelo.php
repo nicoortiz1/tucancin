@@ -62,7 +62,11 @@ class ModeloProductos{
 	*/
 	static public function mdlEditarProducto($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, descripcion = :descripcion, imagen = :imagen, stock = :stock, lote = :lote, precio_compra = :precio_compra, precio_venta = :precio_venta WHERE codigo = :codigo");
+<<<<<<<<< Temporary merge branch 1
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_categoria, codigo, descripcion, imagen, stock, lote, precio_compra, precio_venta) VALUES (:id_categoria, :codigo, :descripcion, :imagen, :stock, :lote, :precio_compra, :precio_venta)");
+=========
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla(id_categoria, codigo, descripcion, imagen, stock, lote, precio_compra, precio_venta) VALUES (:id_categoria, :codigo, :descripcion, :imagen, :stock, :lote, :precio_compra, :precio_venta)");
+>>>>>>>>> Temporary merge branch 2
 
 		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
 		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);

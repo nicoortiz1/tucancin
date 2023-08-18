@@ -317,7 +317,9 @@ MODAL EDITAR PRODUCTO
 
       <form role="form" method="post" enctype="multipart/form-data">
 
-        <!-- CABEZA DEL MODAL -->
+        <!--=====================================
+        CABEZA DEL MODAL
+        ======================================-->
 
         <div class="modal-header" style="background:##54190E; color:white">
 
@@ -327,7 +329,9 @@ MODAL EDITAR PRODUCTO
 
         </div>
 
-        <!-- CUERPO DEL MODAL -->
+        <!--=====================================
+        CUERPO DEL MODAL
+        ======================================-->
 
         <div class="modal-body">
 
@@ -440,7 +444,9 @@ MODAL EDITAR PRODUCTO
 
         </div>
 
-        <!-- PIE DEL MODAL -->
+        <!--=====================================
+        PIE DEL MODAL
+        ======================================-->
 
         <div class="modal-footer">
 
