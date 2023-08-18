@@ -4,9 +4,9 @@ require_once "conexion.php";
 
 class ModeloProductos{
 
-	/*=============================================
+	/*
 	MOSTRAR PRODUCTOS
-	=============================================*/
+	*/
 
 	static public function mdlMostrarProductos($tabla, $item, $valor, $orden){
     if($item != null){
@@ -24,9 +24,9 @@ class ModeloProductos{
 }
 
 
-	/*=============================================
+	/*
 	REGISTRO DE PRODUCTO
-	=============================================*/
+	*/
 	static public function mdlIngresarProducto($tabla, $datos){
 
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_categoria, codigo, descripcion, imagen, stock, lote, precio_compra, precio_venta) VALUES (:id_categoria, :codigo, :descripcion, :imagen, :stock, :lote, :precio_compra, :precio_venta)");
@@ -40,6 +40,8 @@ class ModeloProductos{
 		$stmt->bindParam(":precio_compra", $datos["precio_compra"], PDO::PARAM_STR);
 		$stmt->bindParam(":precio_venta", $datos["precio_venta"], PDO::PARAM_STR);
 
+		var_dump($stmt);
+
 		if($stmt->execute()){
 
 			return "ok";
@@ -55,12 +57,12 @@ class ModeloProductos{
 
 	}
 
-	/*=============================================
+	/*
 	EDITAR PRODUCTO
-	=============================================*/
+	*/
 	static public function mdlEditarProducto($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla(id_categoria, codigo, descripcion, imagen, stock, lote, precio_compra, precio_venta) VALUES (:id_categoria, :codigo, :descripcion, :imagen, :stock, :lote, :precio_compra, :precio_venta)");
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, descripcion = :descripcion, imagen = :imagen, stock = :stock, lote = :lote, precio_compra = :precio_compra, precio_venta = :precio_venta WHERE codigo = :codigo");
 
 		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
 		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
@@ -71,6 +73,8 @@ class ModeloProductos{
 		$stmt->bindParam(":precio_compra", $datos["precio_compra"], PDO::PARAM_STR);
 		$stmt->bindParam(":precio_venta", $datos["precio_venta"], PDO::PARAM_STR);
 
+		var_dump($stmt);
+
 		if($stmt->execute()){
 
 			return "ok";
@@ -86,9 +90,9 @@ class ModeloProductos{
 
 	}
 
-	/*=============================================
+	/*
 	BORRAR PRODUCTO
-	=============================================*/
+	*/
 
 	static public function mdlEliminarProducto($tabla, $datos){
 
@@ -112,9 +116,9 @@ class ModeloProductos{
 
 	}
 
-	/*=============================================
+	/*
 	ACTUALIZAR PRODUCTO
-	=============================================*/
+	*/
 
 	static public function mdlActualizarProducto($tabla, $item1, $valor1, $valor){
 
@@ -139,9 +143,9 @@ class ModeloProductos{
 
 	}
 
-	/*=============================================
+	/*
 	MOSTRAR SUMA VENTAS
-	=============================================*/	
+	*/	
 
 	static public function mdlMostrarSumaVentas($tabla){
 
